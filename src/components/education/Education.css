@@ -1,0 +1,219 @@
+:root {
+  --royal-navy: #0a1f44;
+  --navy-dark: #07162d;
+ --navy-light: #1a3a8f;
+  --blue-accent: #3b82f6; /* Changed from gold to blue */
+  --blue-light: #93c5fd; /* Lighter blue variant */
+  --pure-white: #ffffff;
+  --off-white: #f8f9fa;
+  --dark-bg: #0f172a;
+  --card-bg: #1e293b;
+  --text-secondary: #b0b0b0;
+}
+
+.education-section {
+  padding: 2rem 0rem;
+  background-color: var(--dark-bg);
+  position: relative;
+}
+
+.edu-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.edu-section-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--pure-white);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.edu-highlight {
+  color: var(--navy-light); 
+  position: relative;
+}
+
+.edu-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(59, 130, 246, 0.3); /* Blue with opacity */
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.edu-section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: var(--text-secondary);
+  margin-top: 0rem;
+}
+
+.education-timeline {
+  position: relative;
+  padding-left: 70px;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 35px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    var(--blue-accent) 0%, /* Changed to blue */
+    rgba(59, 130, 246, 0.3) 80%, /* Blue with opacity */
+    transparent 100%);
+}
+
+.education-card {
+  position: relative;
+  margin-bottom: 2rem;
+  background: var(--card-bg);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-left: 3px solid var(--blue-accent); /* Changed to blue */
+}
+
+.edu-highlight-card {
+  border: 1px solid rgba(59, 130, 246, 0.3); /* Blue with opacity */
+}
+
+.highlight-card:hover {
+  border-left: 3px solid var(--blue-accent); /* Changed to blue */
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1); /* Blue with opacity */
+}
+
+.edu-timeline-marker {
+  position: absolute;
+  left: -60px;
+  top: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--navy-dark);
+  border: 2px solid var(--blue-accent); /* Changed to blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.edu-icon {
+  font-size: 1.5rem;
+  color: var(--blue-accent); /* Changed to blue */
+}
+
+.education-content {
+  margin-left: 0;
+}
+
+.education-title {
+  font-size: 1.3rem;
+  color: var(--pure-white);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--off-white);
+  font-size: 0.95rem;
+  align-items: center;
+}
+
+.institution {
+  flex: 1;
+  min-width: 200px;
+  opacity: 0.9;
+}
+
+.year {
+  background: rgba(59, 130, 246, 0.1); /* Blue with opacity */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  color: var(--blue-light); /* Light blue */
+}
+
+.score {
+  font-weight: 600;
+  color: var(--blue-accent); /* Changed to blue */
+}
+
+.certification-badge {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.1); /* Blue with opacity */
+  color: var(--blue-accent); /* Changed to blue */
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.3); /* Blue with opacity */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-timeline {
+    padding-left: 50px;
+  }
+  
+  .timeline-marker {
+    left: -40px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .edu-icon {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-timeline {
+    padding-left: 0;
+  }
+  
+  .education-timeline::before {
+    display: none;
+  }
+  
+  .timeline-marker {
+    display: none;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .education-section {
+    padding: 3rem 1rem;
+  }
+  
+  .institution {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,226 @@
+/* About.css */
+:root {
+  --royal-navy: #0a1f44;
+  --navy-dark: #07162d;
+  --navy-light: #1a3a8f;
+  --gold-accent: #d4af37;
+  --pure-white: #ffffff;
+  --off-white: #f8f9fa;
+}
+.about-container {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content {
+ width: -webkit-fill-available;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+  }
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 0;
+}
+
+@media (min-width: 992px) {
+  .about-text {
+    padding-right: 3rem;
+  }
+}
+
+.about-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 4rem;
+  height: 0.3rem;
+  background: var(--navy-light);
+  border-radius: 2px;
+}
+
+.text-highlight { 
+  color:var(--navy-light);
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.about-description p {
+  margin-bottom: 1.5rem;
+}
+
+.name-highlight {
+  font-weight: 600;
+  color:var(--navy-light);
+  position: relative;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  z-index: -1;
+}
+
+.skill-highlight {
+  font-weight: 500;
+  color: var(--navy-light);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+.about-image {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .about-image {
+    margin-top: 0;
+  }
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 4px solid white;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: translateY(-5px);
+}
+
+.coding-illustration {
+  position: absolute;
+  width: 200px;
+  right: -30px;
+  bottom: -30px;
+  z-index: 1;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Animation for text */
+.about-description p {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.about-description p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.about-description p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.about-description p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add to your About.css */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  background: transparent;
+  color: var(--navy-light);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  position: relative;
+  border: 2px solid var(--navy-light);
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background: var(--navy-light);
+  color: var(--pure-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(26, 58, 143, 0.2);
+}
+
+.resume-btn:hover .external-icon {
+  transform: translateX(3px) rotate(-45deg);
+  color: var(--gold-accent);
+}
+
+.external-icon {
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* If you want a filled version instead: */
+.resume-btn {
+  background: linear-gradient(135deg, var(--navy-light), var(--royal-navy));
+  color: var(--pure-white);
+  border: none;
+}
+
+.resume-btn:hover {
+  background: linear-gradient(135deg, var(--royal-navy), var(--navy-light));
+}

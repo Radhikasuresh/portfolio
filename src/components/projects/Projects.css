@@ -1,0 +1,149 @@
+:root {
+  --dark-bg: #0f0f13;
+  --darker-bg: #0a0a0e;
+  --accent: #7b61ff;
+  --accent-hover: #9279ff;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --card-bg: #1a1a1f;
+  --navy-light: #1a3a8f;
+}
+
+.proj-section {
+  padding: 2rem 0;
+  background: var(--darker-bg);
+}
+
+.proj-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.proj-section-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
+
+.proj-highlight {
+  color: var(--navy-light);
+}
+
+.proj-section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+ font-size: 1.1rem;
+  margin-top: 0rem;
+
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.proj-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.proj-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.proj-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.proj-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.proj-card:hover .proj-image img {
+  transform: scale(1.05);
+}
+
+.proj-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proj-card:hover .proj-links {
+  opacity: 1;
+}
+
+.proj-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.proj-links a:hover {
+  color: var(--accent);
+}
+
+.proj-content {
+  padding: 1.5rem;
+}
+
+.proj-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.proj-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.proj-tags span {
+  background: rgba(123, 97, 255, 0.1);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .proj-section-title {
+    font-size: 1.8rem;
+  }
+}
