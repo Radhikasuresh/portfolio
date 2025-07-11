@@ -28,7 +28,7 @@ export default function About() {
             </p>
             
            <a 
-  href="https://drive.google.com/file/d/15BQJ8my41p2_U-NTHDhu-1zgXeRtDWFl/preview" 
+  href="https://drive.google.com/file/d/1uQlB37SWFgMZPcLUNdRmQC-qf6i9l5JO/view" 
   target="_blank"
   rel="noopener noreferrer"
   className="resume-btn"

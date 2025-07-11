@@ -216,4 +216,7 @@
   .institution {
     min-width: 100%;
   }
+  .edu-timeline-marker {
+ display: none;
+}
 }
